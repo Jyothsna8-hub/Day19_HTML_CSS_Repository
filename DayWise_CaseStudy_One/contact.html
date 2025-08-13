@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel Bliss — Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="logo">🌴 Travel <span>Bliss</span></a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="booking.html">Booking</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Contact Us</h1>
+  <div class="grid-2">
+    <section class="card">
+      <h2>Get in touch</h2>
+      <p>Email: <a href="mailto:support@travelbliss.example">support@travelbliss.example</a></p>
+      <p>Phone: +91-90000-00000</p>
+      <p>Address: 42 Beach Rd, Goa, India</p>
+      <div class="map-placeholder" role="img" aria-label="Map placeholder">Map</div>
+    </section>
+
+    <form class="form card" action="success.html" method="post" novalidate>
+      <div class="form-row">
+        <label for="cname">Name*</label>
+        <input id="cname" name="name" type="text" required />
+      </div>
+      <div class="form-row">
+        <label for="cemail">Email*</label>
+        <input id="cemail" name="email" type="email" required />
+      </div>
+      <fieldset class="form-row">
+        <legend>Reason*</legend>
+        <label><input type="radio" name="reason" value="support" required /> Support</label>
+        <label><input type="radio" name="reason" value="sales" /> Sales</label>
+        <label><input type="radio" name="reason" value="other" /> Other</label>
+      </fieldset>
+      <div class="form-row">
+        <label for="cmsg">Message*</label>
+        <textarea id="cmsg" name="message" rows="4" required></textarea>
+      </div>
+      <div class="form-row">
+        <button class="btn" type="submit">Send</button>
+      </div>
+      <p class="muted small">* Required fields</p>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Travel Bliss</p>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel Bliss — Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">🌴 Travel <span>Bliss</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html" class="active">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Your next escape awaits</h1>
+        <p>Handpicked getaways, smooth bookings, and memories that last.</p>
+        <a class="btn" href="destinations.html">Explore Destinations</a>
+      </div>
+    </section>
+
+    <section class="features container">
+      <h2>Why Travel Bliss?</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Curated Spots</h3>
+          <p>Discover beaches, mountains, and cities loved by real travelers.</p>
+        </article>
+        <article class="card">
+          <h3>Smooth Booking</h3>
+          <p>Simple forms, instant confirmations, and flexible options.</p>
+        </article>
+        <article class="card">
+          <h3>24×7 Support</h3>
+          <p>We’re around the clock to help before, during, and after.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="highlight container">
+      <h2>Popular Right Now</h2>
+      <div class="grid-3">
+        <a class="tile" href="destinations.html#bali">
+          <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80" alt="Bali beach" />
+          <span>Bali, Indonesia</span>
+        </a>
+        <a class="tile" href="destinations.html#paris">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80" alt="Paris city" />
+          <span>Paris, France</span>
+        </a>
+        <a class="tile" href="destinations.html#maldives">
+          <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80" alt="Maldives water villas" />
+          <span>Maldives</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Travel Bliss · <a href="contact.html">Contact us</a></p>
+    <div class="social">
+      <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

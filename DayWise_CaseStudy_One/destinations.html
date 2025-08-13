@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel Bliss — Destinations</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="logo">🌴 Travel <span>Bliss</span></a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="destinations.html" class="active">Destinations</a>
+    <a href="booking.html">Booking</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Browse Destinations</h1>
+  <p class="muted">Click a card to prefill your booking later.</p>
+
+  <section class="grid-4 gallery">
+    <!-- Bali -->
+    <a id="bali" class="card link-card" href="booking.html?place=Bali">
+      <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80" alt="Bali cliffs" />
+      <h3>Bali, Indonesia</h3>
+      <p>Beaches, temples, cafes.</p>
+    </a>
+
+    <!-- Paris -->
+    <a id="paris" class="card link-card" href="booking.html?place=Paris">
+      <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1200&q=80" alt="Eiffel Tower" />
+      <h3>Paris, France</h3>
+      <p>Art, pastries, strolls.</p>
+    </a>
+
+    <!-- Maldives -->
+    <a id="maldives" class="card link-card" href="booking.html?place=Maldives">
+      <img src="https://images.unsplash.com/photo-1505764706515-aa95265c5abc?auto=format&fit=crop&w=1200&q=80" alt="Maldives sea" />
+      <h3>Maldives</h3>
+      <p>Overwater villas and lagoons.</p>
+    </a>
+
+    <!-- Kyoto -->
+    <a id="kyoto" class="card link-card" href="booking.html?place=Kyoto">
+      <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&w=1200&q=80" alt="Kyoto shrine" />
+      <h3>Kyoto, Japan</h3>
+      <p>Temples and tea houses.</p>
+    </a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Travel Bliss</p>
+  <div class="social">
+    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

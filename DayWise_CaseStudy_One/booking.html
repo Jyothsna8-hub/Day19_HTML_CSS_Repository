@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel Bliss — Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="logo">🌴 Travel <span>Bliss</span></a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="booking.html" class="active">Booking</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Book Your Trip</h1>
+
+  <form class="form card" action="success.html" method="get" novalidate>
+    <div class="form-row">
+      <label for="fullname">Full Name*</label>
+      <input id="fullname" name="fullname" type="text" required placeholder="e.g., Swaroop Tiger" />
+    </div>
+
+    <div class="form-row">
+      <label for="email">Email*</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.com" />
+    </div>
+
+    <div class="form-row">
+      <label for="destination">Destination*</label>
+      <input id="destination" name="destination" type="text" required placeholder="Bali, Paris…" />
+    </div>
+
+    <div class="form-row">
+      <label for="dates">Travel Dates*</label>
+      <input id="dates" name="dates" type="date" required />
+    </div>
+
+    <fieldset class="form-row">
+      <legend>Travel Class*</legend>
+      <label><input type="radio" name="class" value="economy" required /> Economy</label>
+      <label><input type="radio" name="class" value="business" /> Business</label>
+      <label><input type="radio" name="class" value="first" /> First</label>
+    </fieldset>
+
+    <fieldset class="form-row">
+      <legend>Add-ons</legend>
+      <label><input type="checkbox" name="addons" value="meals" /> In-flight meals</label>
+      <label><input type="checkbox" name="addons" value="insurance" /> Travel insurance</label>
+      <label><input type="checkbox" name="addons" value="pickup" /> Airport pickup</label>
+    </fieldset>
+
+    <div class="form-row">
+      <label for="notes">Notes</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Any preferences or requests?"></textarea>
+    </div>
+
+    <div class="form-row">
+      <button type="submit" class="btn">Submit Booking</button>
+      <button type="reset" class="btn btn-ghost">Reset</button>
+    </div>
+    <p class="muted small">* Required fields</p>
+  </form>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Travel Bliss</p>
+</footer>
+
+<script>
+  // Prefill from query like ?place=Bali
+  const params = new URLSearchParams(location.search);
+  const place = params.get('place');
+  if (place) document.getElementById('destination').value = place;
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
